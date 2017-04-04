@@ -19,7 +19,7 @@ public class ProcessingThread extends Thread {
     private boolean isRunning = true;
 
     //private Random random = new Random();
-    Random rand;
+    Random rand = new Random();
 
     // nextInt is normally exclusive of the top value,
     // so add 1 to make it inclusive
@@ -31,12 +31,18 @@ public class ProcessingThread extends Thread {
     private int val4;
     private int max = 10;
     private int min = 0;
+    //private int min = 0;
 
     public ProcessingThread(Context context) {
         Log.d("[ProcessingThread]", " entered constructor");
+
+
         this.context = context;
 
+        Log.d("[ProcessingThread]", " entered constructor");
+
         val1 =  rand.nextInt((max - min) + 1) + min;
+        Log.d("[ProcessingThread]", " entered constructor");
         val2 =  rand.nextInt((max - min) + 1) + min;
         val3 =  rand.nextInt((max - min) + 1) + min;
         val4 =  rand.nextInt((max - min) + 1) + min;

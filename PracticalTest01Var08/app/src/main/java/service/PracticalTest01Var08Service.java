@@ -14,7 +14,7 @@ public class PracticalTest01Var08Service extends Service {
         //int firstNumber = intent.getIntExtra("firstNumber", -1);
         //int secondNumber = intent.getIntExtra("secondNumber", -1);
         Log.d("service started", "service started");
-        processingThread = new ProcessingThread(this);
+        processingThread = new ProcessingThread(getBaseContext());
         processingThread.start();
         Log.d("service started 2", "service started");
         return Service.START_REDELIVER_INTENT;

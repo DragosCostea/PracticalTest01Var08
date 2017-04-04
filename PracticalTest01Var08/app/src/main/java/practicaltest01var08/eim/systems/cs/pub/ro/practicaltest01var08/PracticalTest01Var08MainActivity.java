@@ -101,7 +101,7 @@ public class PracticalTest01Var08MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), service.PracticalTest01Var08Service.class);
             //intent.putExtra("firstNumber", leftNumberOfClicks);
             //intent.putExtra("secondNumber", rightNumberOfClicks);
-            //getApplicationContext().startService(intent);
+            getApplicationContext().startService(intent);
             serviceStatus = 1; // service started
         }
         Log.d("main", "sent start service");
